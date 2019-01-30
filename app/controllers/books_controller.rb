@@ -25,6 +25,7 @@ class BooksController < ApplicationController
     @book = Book.find params[:id]
   end
  
+  # FIXME: Edit doesn't work
   def update
     @book = Book.find params[:id]
     params.require(:book)
