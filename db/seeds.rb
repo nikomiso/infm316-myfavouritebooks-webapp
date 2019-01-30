@@ -1,7 +1,10 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+more_books = [
+  {:title => 'Anna Karenina', :genre => 'Romance', 
+  :description => 'Anna Karenina is the tragic story of Countess Anna Karenina,
+  a married noblewoman and socialite, and her affair with the affluent Count 
+  Vronsky. ', :isbn_number => '978-1-84749-059-9', :publish_date => '1-Jun-1877'}
+]
+ 
+more_books.each do |book|
+  Book.create!(book)
+end
